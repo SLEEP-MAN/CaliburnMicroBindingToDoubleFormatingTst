@@ -1,0 +1,17 @@
+<Window x:Class="CaliburnMicroBindToDoubleFormattingTest.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" x:Name="BoundByName" HorizontalAlignment="Stretch" Height="23" />
+        <TextBox Grid.Row="1" x:Name="BoundByPath" HorizontalAlignment="Stretch" Height="23" Text="{Binding Path=BoundByPath}"/>
+        <TextBox Grid.Row="2" x:Name="BoundByPathWithFormatting" HorizontalAlignment="Stretch" Height="23" Text="{Binding Path=BoundByPathWithFormatting, StringFormat=N2}"/>
+
+    </Grid>
+
+</Window>
