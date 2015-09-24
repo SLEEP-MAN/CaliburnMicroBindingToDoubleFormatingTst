@@ -7,10 +7,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBox Grid.Row="0" x:Name="BoundByName" HorizontalAlignment="Stretch" Height="23" />
-        <TextBox Grid.Row="1" x:Name="BoundByPath" HorizontalAlignment="Stretch" Height="23" Text="{Binding Path=BoundByPath}"/>
-        <TextBox Grid.Row="2" x:Name="BoundByPathWithFormatting" HorizontalAlignment="Stretch" Height="23" Text="{Binding Path=BoundByPathWithFormatting, StringFormat=N2}"/>
+        <TextBox Grid.Row="1" x:Name="BoundByPathWorksAsBoundByName" HorizontalAlignment="Stretch" Height="23" Text="{Binding Path=BoundByPath, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="2" x:Name="BoundByPath" HorizontalAlignment="Stretch" Height="23" Text="{Binding Path=BoundByPath}"/>
+        <TextBox Grid.Row="3" x:Name="BoundByPathWithFormatting" HorizontalAlignment="Stretch" Height="23" Text="{Binding Path=BoundByPathWithFormatting, StringFormat=N2}"/>
 
     </Grid>
 
